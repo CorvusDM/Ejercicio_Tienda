@@ -2,7 +2,7 @@ package org.example;
 
 
 /** Clase Producto */
-public class Producto {
+public class Articulo {
     String codigo;
     String nombre;
     double precio;
@@ -16,7 +16,7 @@ public class Producto {
      * @param precio Precio del producto
      * @param stock Cantidad disponible en stock
      */
-    public Producto(String codigo, String nombre, double precio, int stock) {
+    public Articulo(String codigo, String nombre, double precio, int stock) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;
@@ -31,7 +31,7 @@ public class Producto {
      */
     public boolean venderProducto(int cantidadAVender) {
         boolean ventaExitosa = false;
-        if (this.disponible && this.stock >= cantidadAVender && cantidadAVender > 0) {
+        if (this.stock >= cantidadAVender && cantidadAVender > 0) {
             this.stock = this.stock - cantidadAVender;
             if (this.stock == 0) {
                 this.disponible = false;
